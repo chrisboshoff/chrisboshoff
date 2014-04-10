@@ -1,4 +1,5 @@
 Chrisboshoff::Application.routes.draw do
+  get "career/index"
   get "contact/index"
   get "social/index"
   get "inspiration/index"

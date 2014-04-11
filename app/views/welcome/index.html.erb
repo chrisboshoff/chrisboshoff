@@ -23,12 +23,24 @@
       <p><a class="btn btn-default" href="/social/index" role="button">View details &raquo;</a></p> 
     </div>
     <div class="col-md-4">
-
       <h2>Inspirations</h2>
       <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
       <p><a class="btn btn-default" href="/inspiration/index" role="button">View details &raquo;</a></p>
     </div>
   </div>
 
-  
+  <div id="alertMobile" class="alert alert-info alert-dismissable" style="display: none; margin-top:12px; margin-bottom: 0px;">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <strong>Mobile Compatible</strong>: This site is viewable from your mobile phone or tablet.
+  </div>
+
+  <script>
+    if (!isMobile())
+      setTimeout(function() {
+        $('#alertMobile').fadeIn();
+        setTimeout(function() {
+          $('#alertMobile').fadeOut();
+        }, 5000);
+      }, 2000);
+  </script>
 </div> <!-- /container -->

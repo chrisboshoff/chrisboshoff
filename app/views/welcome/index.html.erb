@@ -1,11 +1,15 @@
-
-
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron" >
   <div class="container">
-    <h1>Welcome to Chris Boshoff</h1>
-    <p>This web portal is about me. Who I am, what I do and why I do it.</p>
-    <p><a href="/about/index" class="btn btn-primary btn-lg" role="button">More about me &raquo;</a></p>
+    <div class="row">
+      <div class="col-md-8">
+        <h1>Welcome to Chris Boshoff</h1>
+        <p>This web portal is about me. Who I am, what I do and why I do it.</p>
+      </div>
+      <div class="col-md-1">
+        <img src="/assets/berg.jpg" height="144s"/>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -14,18 +18,19 @@
   <div class="row">
     <div class="col-md-4">
       <h2>Career</h2>
-      <p>I've been involved in software development and architecture for over a decade. I have a passion for creating solutions using the latest technologies, including mobile devices.</p>
-      <p><a class="btn btn-default" href="/career/index" role="button">View details &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-      <h2>Social</h2>
-      <p>I am a firm believer that one should have a good balance in life. Always make time for all the different aspects in your life.</p>
-      <p><a class="btn btn-default" href="/social/index" role="button">View details &raquo;</a></p> 
+      <p>I have been involved in software architecture and development for over a decade. 
+        I have a passion for creating solutions that exceed expectations.</p>
+      <p><a class="btn btn-primary" href="/career/index" role="button">View details &raquo;</a></p>
     </div>
     <div class="col-md-4">
       <h2>Inspirations</h2>
       <p>My inspirations in life are what drives me. Whether it's technology, art or science, I will always be inspired by things bigger than me.</p>
-      <p><a class="btn btn-default" href="/inspiration/index" role="button">View details &raquo;</a></p>
+      <p><a class="btn btn-primary" href="/inspiration/index" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Social</h2>
+      <p>I am a firm believer that one should have a good balance in life and always make time for all the different aspects in your life.</p>
+      <p><a class="btn btn-primary" href="/social/index" role="button">View details &raquo;</a></p> 
     </div>
   </div>
 
@@ -34,13 +39,15 @@
     <strong>Mobile Compatible</strong>: This site is viewable from your mobile phone or tablet.
   </div>
 
-  <script>
-    if (!isMobile())
-      setTimeout(function() {
-        $('#alertMobile').fadeIn();
+  <% if not params[:home] %>
+    <script>
+      if (!isMobile())
         setTimeout(function() {
-          $('#alertMobile').fadeOut();
-        }, 5000);
-      }, 2000);
-  </script>
+          $('#alertMobile').fadeIn();
+          setTimeout(function() {
+            $('#alertMobile').fadeOut();
+          }, 5000);
+        }, 2000);
+    </script>
+  <% end %>
 </div> <!-- /container -->

@@ -35,20 +35,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand"><img src="/assets/berg.jpg" width="28" style="margin-top:-8px;"/></a>
-          <a class="navbar-brand" href="/">Chris Boshoff</a>                  
+          <a class="navbar-brand" href="/?home=1">Chris Boshoff</a>                  
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li <%= 'class=active' if params[:controller] == 'about'%>><a href="/about/index">About</a></li>
             <li <%= 'class=active' if params[:controller] == 'career'%>><a href="/career/index">Career</a></li>
-            <li <%= 'class=active' if params[:controller] == 'social'%>><a href="/social/index">Social</a></li>
             <li <%= 'class=active' if params[:controller] == 'inspiration'%>><a href="/inspiration/index">Inspirations</a></li>
+            <li <%= 'class=active' if params[:controller] == 'social'%>><a href="/social/index">Social</a></li>
             <li <%= 'class=active' if params[:controller] == 'contact'%>><a href="/contact/index">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
+    
     <%= yield %>
 
     <div class="container">

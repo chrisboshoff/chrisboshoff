@@ -1,4 +1,6 @@
 Chrisboshoff::Application.routes.draw do
+  get "api/index"
+  get "project/index"
   devise_for :users
   get "career/index"
   get "contact/index"

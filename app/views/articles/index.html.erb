@@ -1,0 +1,33 @@
+<div class='container'>
+  <h1>Listing articles</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Text</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @articles.each do |article| %>
+        <tr>
+          <td><%= article.title %></td>
+          <td><%= article.text %></td>
+          <td width="10"><%= link_to 'Show', article %></td>
+          <td width="10"><%= link_to 'Edit', edit_article_path(article) %></td>
+          <td width="10"><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <a href="<%=new_article_path%>" class="btn btn-primary"><span class="glyphicon glyphicon-plus-sign"></span>&nbsp; New Article</a>
+  
+
+  </div>

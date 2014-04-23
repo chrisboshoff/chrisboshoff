@@ -1,5 +1,7 @@
 <div class='container'>
-  <p id="notice"><%= notice %></p>
+
+  <br>
+  <div class="alert alert-success"><p id="notice"><%= notice %></p></div>
 
   <p>
     <strong>Title:</strong>
@@ -8,7 +10,7 @@
 
   <p>
     <strong>Text:</strong>
-    <%= @article.text %>
+    <%= raw @article.text %>
   </p>
 
   <%= link_to 'Edit', edit_article_path(@article) %> |

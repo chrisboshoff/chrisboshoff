@@ -1,5 +1,8 @@
 Chrisboshoff::Application.routes.draw do
-  resources :articles
+  #resources :articles
+  resources :articles do
+    get 'page/:page', :action => :index, :on => :collection
+  end
 
   get "api/index"
   get "project/index"

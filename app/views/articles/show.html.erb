@@ -1,7 +1,7 @@
 <div class='container'>
-
-  <br>
-  <div class="alert alert-success"><p id="notice"><%= notice %></p></div>
+  <h1>View Article</h1>
+  
+  <!--<div class="alert alert-success"><p id="notice"><%= notice %></p></div>-->
 
   <p>
     <strong>Title:</strong>
@@ -12,7 +12,8 @@
     <strong>Text:</strong>
     <%= raw @article.text %>
   </p>
-
-  <%= link_to 'Edit', edit_article_path(@article) %> |
-  <%= link_to 'Back', articles_path %>
+  <br>
+  <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-primary' %>
+  <%= link_to 'Delete', @article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+  <%= link_to 'Back', articles_path, class: 'btn btn-default' %>
 </div>

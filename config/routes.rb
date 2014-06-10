@@ -5,15 +5,25 @@ Chrisboshoff::Application.routes.draw do
   end
 
   get "api/index"
+  get "/api" => "api#index"
+  
   get "project/index"
+  get "/project" => "project#index"
+  
   devise_for :users
+  
   get "career/index"
+  get "/career" => "career#index"
+  
   get "contact/index"
-  get "social/index"
+  get "/contact" => "contact#index"
+  
   get "inspiration/index"
+  get "/inspiration" => "inspiration#index"
+  
   get "software/index"
-  get "about/index"
-  get "movie/getmetadata"
+  get "/software" => "software#index"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

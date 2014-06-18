@@ -4,25 +4,20 @@ Chrisboshoff::Application.routes.draw do
     get 'page/:page', :action => :index, :on => :collection
   end
 
-  get "api/index"
-  get "/api" => "api#index"
+  get "api" => "api#index"
+  get "api/datetime"
   
-  get "project/index"
-  get "/project" => "project#index"
+  get "project" => "project#index"
+  
+  get "career" => "career#index"
+
+  get "contact" => "contact#index"
+
+  get "inspiration" => "inspiration#index"
+
+  get "software" => "software#index"
   
   devise_for :users
-  
-  get "career/index"
-  get "/career" => "career#index"
-  
-  get "contact/index"
-  get "/contact" => "contact#index"
-  
-  get "inspiration/index"
-  get "/inspiration" => "inspiration#index"
-  
-  get "software/index"
-  get "/software" => "software#index"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

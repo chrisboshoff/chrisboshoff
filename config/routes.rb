@@ -4,14 +4,14 @@ Chrisboshoff::Application.routes.draw do
     get 'page/:page', :action => :index, :on => :collection
   end
 
+  resources :contacts
+  
   get "api" => "api#index"
   get "api/datetime"
   
   get "project" => "project#index"
   
   get "career" => "career#index"
-
-  get "contact" => "contact#index"
 
   get "inspiration" => "inspiration#index"
 

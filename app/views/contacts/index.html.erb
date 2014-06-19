@@ -4,10 +4,21 @@
   <br>
   <a href="mailto:chris.bossie@gmail.com?Subject=Hello" style="text-decoration: none; color: inherit;">
     <p><img src="/assets/48x48_email.png" alt="Email" title="Email me" style="background-color: #2d2d2d"/>&nbsp;&nbsp;chris.bossie@gmail.com</p></a>
- <a href="skype:chris.bossie?chat" style="text-decoration: none; color: inherit;">
-   <p><img src="/assets/skype-512.gif" alt="Skype" title="Start a Skype chat with me" height="48" style="background-color: #2d2d2d"/>&nbsp;&nbsp;chris.bossie</p></a>
+  <a href="skype:chris.bossie?chat" style="text-decoration: none; color: inherit;">
+    <p><img src="/assets/skype-512.gif" alt="Skype" title="Start a Skype chat with me" height="48" style="background-color: #2d2d2d"/>&nbsp;&nbsp;chris.bossie</p></a>
   <a href="http://www.linkedin.com/in/chrisbossie" target="_blank" style="text-decoration: none; color: inherit;">
     <p><img src="/assets/48x48_linkedin.png" alt="LinkedIn" title="View my LinkedIn profile" style="background-color: #2d2d2d"/>&nbsp;&nbsp;linkedin.com/in/chrisbossie</p></a>
   <a href="https://www.facebook.com/chris.bossie" target="_blank" style="text-decoration: none; color: inherit;">
     <p><img src="/assets/48x48_facebook.png" alt="Facebook" title="View my Facebook profile" style="background-color: #2d2d2d"/>&nbsp;&nbsp;facebook.com/chris.bossie</p></a>
+
+  <br>
+  <div class="panel panel-default" style="max-width: 500px">
+    <div class="panel-heading" style="background-color: #2d2d2d; color: white;">Send me a message</div>
+    <div class="panel-body">
+      <%if params[:sent]%>
+        <div class="alert alert-success"><strong>Thank you.</strong> Your message has been sent</div>
+      <%end%>
+      <%= render 'contact' %>
+    </div>
+  </div>
 </div>

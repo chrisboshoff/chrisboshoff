@@ -15,8 +15,8 @@
   <div class="panel panel-dark" style="max-width: 500px">
     <div class="panel-heading ">Send me a message</div>
     <div class="panel-body">
-      <%if params[:sent]%>
-        <div class="alert alert-success"><strong>Thank you.</strong> Your message has been sent</div>
+      <%if params[:sent] == '1'%>
+        <div class="alert alert-success"><strong>Thank you.</strong> Your message has been sent.</div>
       <%end%>
       <%= render 'contact' %>
     </div>

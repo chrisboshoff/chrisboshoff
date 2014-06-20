@@ -8,10 +8,32 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
  *= require_tree .
  *= require bootstrap.min
+ *= require_self
  */
+
+.panel-dark {
+    border-color: #ddd;
+}
+
+.panel-dark > .panel-heading {
+    background-color: #2d2d2d; 
+    color: white;
+    border-color: #ddd;
+}
+
+.panel-dark > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #ddd;
+}
+.panel-dark > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #ddd;
+}
+
+.list-group-item-dark {
+  color: white;
+  background-color: #2d2d2d;
+}
 
 body {
     padding-top: 50px;
@@ -25,4 +47,16 @@ body {
        url('../assets/glyphicons-halflings-regular.woff') format('woff'), 
        url('../assets/glyphicons-halflings-regular.ttf') format('truetype'), 
        url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.field_with_errors label {
+  float: left;
+}
+
+.field_with_errors input { 
+  border: red solid thin;  
+}
+
+.field_with_errors textarea {
+  border: red solid thin;  
 }

@@ -4,8 +4,12 @@ class ContactsController < ApplicationController
   end
   
   def create
-    contact = params[:contact]
+    @contact = Contact.new(params[:contact])
     
-    redirect_to action: 'index', :sent => 1
+    if @contact.valid?
+      redirect_to action: 'index', :sent => 1
+    else
+      render action: 'index'
+    end
   end
 end

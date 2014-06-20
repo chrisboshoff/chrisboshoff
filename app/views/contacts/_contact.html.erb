@@ -1,4 +1,15 @@
 <%= form_for(@contact) do |f| %>
+    <% if @contact.errors.any? %>
+      <div class="panel panel-danger">
+        <div class="panel-heading"><%= pluralize(@contact.errors.count, "error") %> prohibited this message from being sent:</div>
+        <div class="panel-body">
+          <% @contact.errors.full_messages.each do |msg| %>
+            <div><%= msg %></div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+
     <div class="form-group">
       <%= f.label :name %><br>
       <%= f.text_field :name, class: 'form-control' %>

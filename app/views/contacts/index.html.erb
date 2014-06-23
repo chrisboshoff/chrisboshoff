@@ -12,13 +12,24 @@
     <p><img src="/assets/48x48_facebook.png" alt="Facebook" title="View my Facebook profile" style="background-color: #2d2d2d"/>&nbsp;&nbsp;facebook.com/chris.bossie</p></a>
 
   <br>
-  <div class="panel panel-dark" style="max-width: 500px">
-    <div class="panel-heading ">Send me a message</div>
-    <div class="panel-body">
-      <%if params[:sent] == '1'%>
-        <div class="alert alert-success"><strong>Thank you.</strong> Your message has been sent.</div>
-      <%end%>
-      <%= render 'contact' %>
+  <div class="panel-group" id="message">
+    <div class="panel panel-dark" style="max-width: 500px">
+      <div class="panel-heading ">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#message" href="#collapseBody">
+            Send me a message
+          </a>
+          <span id="messageIcon" class="glyphicon <%=(@contact.errors.any? or params[:sent] == '1') ? 'glyphicon-chevron-down' : 'glyphicon-chevron-right'%>" style="float: right;"></span>
+        </h4>
+      </div>
+      <div id="collapseBody" class="panel-collapse collapse <%='in' if @contact.errors.any? or params[:sent] == '1'%>">
+        <div class="panel-body">
+          <%if params[:sent] == '1'%>
+            <div class="alert alert-success"><strong>Thank you.</strong> Your message has been sent.</div>
+          <%end%>
+          <%= render 'contact' %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

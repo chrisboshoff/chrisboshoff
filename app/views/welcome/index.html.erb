@@ -47,16 +47,28 @@
 
   <div id="alertMobile" class="alert alert-info alert-dismissable" style="display: none; margin-top:12px; margin-bottom: 0px;">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-    <strong>Mobile Compatible</strong>: This site is viewable from your mobile phone or tablet.
+    <strong>Mobile Compatible</strong>: This site is also viewable from your mobile phone or tablet.
+  </div>
+  
+  <div id="alertDesktop" class="alert alert-info alert-dismissable" style="display: none; margin-top:12px; margin-bottom: 0px;">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <strong>Desktop Compatible</strong>: This site is also viewable from your desktop.
   </div>
 
   <% if not params[:home] %>
     <script>
       if (!isMobile())
         setTimeout(function() {
-          $('#alertMobile').fadeIn();
+          $('#alertMobile').slideDown();
           setTimeout(function() {
-            $('#alertMobile').fadeOut();
+            $('#alertMobile').slideUp();
+          }, 5000);
+        }, 2000);
+      else
+        setTimeout(function() {
+          $('#alertDesktop').slideDown();
+          setTimeout(function() {
+            $('#alertDesktop').slideUp();
           }, 5000);
         }, 2000);
     </script>

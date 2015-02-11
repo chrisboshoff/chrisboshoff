@@ -1,4 +1,5 @@
 Chrisboshoff::Application.routes.draw do
+  get "wedding/index"
   #resources :articles
   resources :articles do
     get 'page/:page', :action => :index, :on => :collection
@@ -16,6 +17,8 @@ Chrisboshoff::Application.routes.draw do
   get "inspiration" => "inspiration#index"
 
   get "software" => "software#index"
+  
+  get "wedding" => "wedding#index"
   
   devise_for :users
   

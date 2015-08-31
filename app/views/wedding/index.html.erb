@@ -2,7 +2,7 @@
   <head>
     <title>Chris & Emogen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="icon" type="image/jpg" href="/assets/berg.jpg" width="5" height="9"/>
+    <link rel="icon" type="image/jpg" href="/assets/beach.jpg" width="5" height="9"/>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
@@ -39,27 +39,23 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li <%= 'class=active' if params[:controller] == 'career'%>><a href="/career">Information</a></li>
+            <li <%= 'class=active' if params[:controller] == 'wedding_info'%>><a href="/info">Information</a></li>
             
-            <li <%= 'class=active' if params[:controller] == 'project' or params[:controller] == 'api' or params[:controller] == 'software'%> class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Accommodation <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="/articles">Articles</a></li>
-                <li><a href="/api">RESTful API</a></li>
-                <li><a href="/software">Other Projects</a></li>
-              </ul>
-            </li>
+            <li <%= 'class=active' if params[:controller] == 'wedding_accommodation'%>><a href="/accommodation">Accommodation</a></li>
 
-            <li <%= 'class=active' if params[:controller] == 'inspiration'%>><a href="/inspiration">RSVP</a></li>
-            <li <%= 'class=active' if params[:controller] == 'contacts'%>><a href="/contacts">Contact</a></li>
+            <li <%= 'class=active' if params[:controller] == 'wedding_rsvp'%>><a href="/rsvp">RSVP</a></li>
+            <li <%= 'class=active' if params[:controller] == 'wedding_contact'%>><a href="/contact">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
         
       </div>
     </div>
-    <div> 
-      <div class="jumbotron" style="background-image: url(/assets/table.jpg); background-repeat: no-repeat; background-position: center top; background-size: cover; height: 100%;">
-      </div>
+    <div class="jumbotron" style="margin-top: -52px; background-image: url(/assets/beach.png); background-repeat: no-repeat; background-position: center top; background-size: cover; height: 100vh; display: flex; align-items: center;">
+        <div class="panel panel-dark" style="margin: 20% auto; width: 400px;">
+          <div class="panel-body">
+
+          </div>
+        </div>
     </div>
   </body>
 
